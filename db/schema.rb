@@ -32,14 +32,14 @@ ActiveRecord::Schema.define(version: 8) do
   create_table "networks", force: :cascade do |t|
     t.string   "call_letters"
     t.integer  "channel"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   create_table "shows", force: :cascade do |t|
     t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.integer  "network_id"
     t.string   "day"
     t.string   "season"
